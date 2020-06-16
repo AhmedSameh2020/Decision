@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Controllers\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Decision.Model\Decision.Model.csproj" />
+    <ProjectReference Include="..\Decision.Services.Interfaces\Decision.Services.Interfaces.csproj" />
+    <ProjectReference Include="..\Decision.Services\Decision.Services.csproj" />
+  </ItemGroup>
+
+
+</Project>
