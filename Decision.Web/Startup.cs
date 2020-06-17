@@ -1,3 +1,5 @@
+using Decision.Services;
+using Decision.Services.Interfaces;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -20,12 +22,14 @@ namespace Decision.Web
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddOrchardCore();
             services.AddControllersWithViews();
             // In production, the Angular files will be served from this directory
             services.AddSpaStaticFiles(configuration =>
             {
                 configuration.RootPath = "ClientApp/dist";
             });
+            services.AddSingleton(typeof(IQuestionService), typeof(QuestionService));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -57,7 +61,6 @@ namespace Decision.Web
                     name: "default",
                     pattern: "{controller}/{action=Index}/{id?}");
             });
-
             app.UseSpa(spa =>
             {
                 // To learn more about options for serving an Angular SPA from ASP.NET Core,
@@ -70,6 +73,7 @@ namespace Decision.Web
                     spa.UseAngularCliServer(npmScript: "start");
                 }
             });
+            app.UseOrchardCore();
         }
     }
 }

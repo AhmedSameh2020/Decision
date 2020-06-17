@@ -6,15 +6,14 @@ using System.Text;
 
 namespace Decision.Services
 {
-    public class DecisionService : IDecisionService
+    public class QuestionService : IQuestionService
     {
-        private Question Question { get; set; }
-        public DecisionService()
+        public Question GetRootQuestion()
         {
-            Question = new Question()
+            return new Question()
             {
                 QuestionBody = "Do you like healthy food?",
-                LeftChoice = "yes",
+                LeftChoice = "Yes",
                 LeftQuestion = new Question()
                 {
                     QuestionBody = "Do you prefer fruits or vegetables?",
