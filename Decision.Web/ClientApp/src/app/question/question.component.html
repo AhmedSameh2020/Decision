@@ -1,7 +1,7 @@
-<p *ngIf="!question"><em>Loading...</em></p>
+<p *ngIf="!questionService.question"><em>Loading...</em></p>
 
-<div class="text-center" *ngIf="question">
-  <div class="text-center question">{{question.questionBody}}</div>
-  <button (click)="GetNextQuestion(question.leftChoice)" class="button btn btn-primary">{{question.leftChoice}}</button>
-  <button (click)="GetNextQuestion(question.rightChoice)" class="button btn btn-success">{{question.rightChoice}}</button>
+<div class="text-center" *ngIf="questionService.question">
+  <div class="text-center question">{{questionService.question.questionBody}}</div>
+  <button (click)="getNextQuestion(questionService.question.leftChoice)" class="button btn btn-primary">{{questionService.question.leftChoice}}</button>
+  <button (click)="getNextQuestion(questionService.question.rightChoice)" class="button btn btn-success">{{questionService.question.rightChoice}}</button>
 </div>

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { QuestionService } from '../question.service';
 
 @Component({
     selector: 'app-diagram',
@@ -8,7 +9,7 @@ import { Component } from '@angular/core';
 /** diagram component*/
 export class DiagramComponent {
     /** diagram ctor */
-    constructor() {
-
+  constructor(private questionService: QuestionService) {
+      
     }
 }

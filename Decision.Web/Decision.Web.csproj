@@ -25,11 +25,21 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="ClientApp\src\app\PlayerChoices.ts" />
+    <None Remove="ClientApp\src\app\Question.ts" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\Decision.WebApi\Decision.WebApi.csproj" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="Controllers\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <TypeScriptCompile Include="ClientApp\src\app\PlayerChoices.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\Question.ts" />
   </ItemGroup>
 
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">

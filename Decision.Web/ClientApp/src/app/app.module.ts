@@ -8,6 +8,8 @@ import { AppComponent } from './app.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
 import { QuestionComponent } from './question/question.component';
 import { DiagramComponent } from './diagram/diagram.component';
+import { ProgressStepsComponent } from './progress-steps/progress-steps.component';
+import { QuestionService } from './question.service';
 
 @NgModule({
   declarations: [
@@ -15,6 +17,7 @@ import { DiagramComponent } from './diagram/diagram.component';
     NavMenuComponent,
     QuestionComponent,
     DiagramComponent,
+    ProgressStepsComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -23,9 +26,13 @@ import { DiagramComponent } from './diagram/diagram.component';
     RouterModule.forRoot([
       { path: '', component: QuestionComponent, pathMatch: 'full' },
       { path: 'diagram', component: DiagramComponent },
+      { path: 'progresssteps', component: ProgressStepsComponent },
     ])
   ],
-  providers: [],
+  providers:
+    [
+    QuestionService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

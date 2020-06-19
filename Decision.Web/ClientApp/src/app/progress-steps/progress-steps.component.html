@@ -1,0 +1,18 @@
+<div  class="container separator" style="height: 0px">
+  <h5>Player Choices</h5>
+  <div class="col-xl-6">
+    <ul class="progress-tracker progress-tracker--vertical" style="margin-top: 30px;">
+      <li *ngFor="let choice of questionService.playerChoices" class="progress-step is-complete">
+        <div class="progress-marker"></div>
+        <div class="progress-text">
+          <h6 class="progress-title">{{choice.question}}</h6>
+          {{choice.choice}}
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div class="col-xl-6">
+    <button class="btn btn-primary" (click)="btnShowDiagram();">Show Diagram</button>
+    </div>
+
+  </div>
