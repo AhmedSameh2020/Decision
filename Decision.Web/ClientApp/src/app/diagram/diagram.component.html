@@ -1,0 +1,96 @@
+<div class="tree">
+  <ul>
+    <li>
+      <a >{{questionService.rootQuestion.questionBody}}</a>
+      <ul>
+
+        <li>
+          <a [attr.target]="questionService.rootQuestion.leftChoice==questionService.playerChoices[0]?.choice ? true: null" >{{questionService.rootQuestion.leftChoice}}</a>
+          <ul>
+            <li>
+              <a >{{questionService.rootQuestion.leftQuestion.questionBody}}</a>
+              <ul>
+                <li>
+                  <a [attr.target]="questionService.rootQuestion.leftQuestion.leftChoice==questionService.playerChoices[1]?.choice ? true: null" >{{questionService.rootQuestion.leftQuestion.leftChoice}}</a>
+                  <ul>
+                    <li>
+                      <a >{{questionService.rootQuestion.leftQuestion.leftQuestion.questionBody}}</a>
+                      <ul>
+                        <li>
+                          <a [attr.target]="questionService.rootQuestion.leftQuestion.leftQuestion.leftChoice==questionService.playerChoices[2]?.choice ? true: null" >{{questionService.rootQuestion.leftQuestion.leftQuestion.leftChoice}}</a>
+                        </li>
+                        <li>
+                          <a [attr.target]="questionService.rootQuestion.leftQuestion.leftQuestion.rightChoice==questionService.playerChoices[2]?.choice ? true: null" >{{questionService.rootQuestion.leftQuestion.leftQuestion.rightChoice}}</a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a [attr.target]="questionService.rootQuestion.leftQuestion.rightChoice==questionService.playerChoices[1]?.choice ? true: null" >{{questionService.rootQuestion.leftQuestion.rightChoice}}</a>
+                  <ul>
+                    <li>
+                      <a >{{questionService.rootQuestion.leftQuestion.rightQuestion.questionBody}}</a>
+                      <ul>
+                        <li>
+                          <a [attr.target]="questionService.rootQuestion.leftQuestion.rightQuestion.leftChoice==questionService.playerChoices[2]?.choice ? true: null" >{{questionService.rootQuestion.leftQuestion.rightQuestion.leftChoice}}</a>
+                        </li>
+                        <li>
+                          <a [attr.target]="questionService.rootQuestion.leftQuestion.rightQuestion.rightChoice==questionService.playerChoices[2]?.choice ? true: null" >{{questionService.rootQuestion.leftQuestion.rightQuestion.rightChoice}}</a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <a [attr.target]="questionService.rootQuestion.rightChoice==questionService.playerChoices[0]?.choice ? true: null" >{{questionService.rootQuestion.rightChoice}}</a>
+          <ul>
+            <li>
+              <a >{{questionService.rootQuestion.rightQuestion.questionBody}}</a>
+              <ul>
+                <li>
+                  <a [attr.target]="questionService.rootQuestion.rightQuestion.leftChoice==questionService.playerChoices[1]?.choice ? true: null" >{{questionService.rootQuestion.rightQuestion.leftChoice}}</a>
+                  <ul>
+                    <li>
+                      <a >{{questionService.rootQuestion.rightQuestion.leftQuestion.questionBody}}</a>
+                      <ul>
+                        <li>
+                          <a [attr.target]="questionService.rootQuestion.rightQuestion.leftQuestion.leftChoice==questionService.playerChoices[2]?.choice ? true: null" >{{questionService.rootQuestion.rightQuestion.leftQuestion.leftChoice}}</a>
+                        </li>
+                        <li>
+                          <a [attr.target]="questionService.rootQuestion.rightQuestion.leftQuestion.rightChoice==questionService.playerChoices[2]?.choice ? true: null" >{{questionService.rootQuestion.rightQuestion.leftQuestion.rightChoice}}</a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a [attr.target]="questionService.rootQuestion.rightQuestion.rightChoice==questionService.playerChoices[1]?.choice ? true: null" >{{questionService.rootQuestion.rightQuestion.rightChoice}}</a>
+                  <ul>
+                    <li>
+                      <a >{{questionService.rootQuestion.rightQuestion.rightQuestion.questionBody}}</a>
+                      <ul>
+                        <li>
+                          <a [attr.target]="questionService.rootQuestion.rightQuestion.rightQuestion.leftChoice==questionService.playerChoices[2]?.choice ? true: null" >{{questionService.rootQuestion.rightQuestion.rightQuestion.leftChoice}}</a>
+                        </li>
+                        <li>
+                          <a [attr.target]="questionService.rootQuestion.rightQuestion.rightQuestion.rightChoice==questionService.playerChoices[2]?.choice ? true: null" >{{questionService.rootQuestion.rightQuestion.rightQuestion.rightChoice}}</a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+
+      </ul>
+    </li>
+  </ul>
+</div>

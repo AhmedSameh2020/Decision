@@ -16,7 +16,7 @@ namespace Decision.Services
                 LeftChoice = "Yes",
                 LeftQuestion = new Question()
                 {
-                    QuestionBody = "Do you prefer fruits or vegetables?",
+                    QuestionBody = "Do you prefer Fruits or Vegetables?",
                     LeftChoice = "Fruits",
                     LeftQuestion = new Question()
                     {
@@ -26,7 +26,7 @@ namespace Decision.Services
                         RightChoice = "Banana",
                         RightQuestion = null
                     },
-                    RightChoice = "vegetables",
+                    RightChoice = "Vegetables",
                     RightQuestion = new Question()
                     {
                         QuestionBody = "Tomato or Cucumber?",
