@@ -3,15 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30204.135
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Decision.Web", "Decision.Web\Decision.Web.csproj", "{DD7F2FA9-7AE2-4E2A-8AF9-F5B4691CA953}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Decision.Web", "Decision.Web\Decision.Web.csproj", "{DD7F2FA9-7AE2-4E2A-8AF9-F5B4691CA953}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Decision.Services", "Decision.Services\Decision.Services.csproj", "{0E1F1193-921D-4971-85BC-82CBC8098837}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Decision.Services", "Decision.Services\Decision.Services.csproj", "{0E1F1193-921D-4971-85BC-82CBC8098837}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Decision.Services.Interfaces", "Decision.Services.Interfaces\Decision.Services.Interfaces.csproj", "{ED504BBF-1738-4F77-A373-8BA9C576FA32}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Decision.Services.Interfaces", "Decision.Services.Interfaces\Decision.Services.Interfaces.csproj", "{ED504BBF-1738-4F77-A373-8BA9C576FA32}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Decision.WebApi", "Decision.WebApi\Decision.WebApi.csproj", "{321810A7-08D4-4772-A006-32ED4B9A4E82}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Decision.WebApi", "Decision.WebApi\Decision.WebApi.csproj", "{321810A7-08D4-4772-A006-32ED4B9A4E82}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Decision.Model", "Decision.Model\Decision.Model.csproj", "{5BD7E8FB-5A29-4F8B-8B05-59DAEA28FD57}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Decision.Model", "Decision.Model\Decision.Model.csproj", "{5BD7E8FB-5A29-4F8B-8B05-59DAEA28FD57}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Decision.WebApiTests", "Decision.WebApiTests\Decision.WebApiTests.csproj", "{333AFD6B-BD4F-47B2-A2C8-306F41223FD9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{5BD7E8FB-5A29-4F8B-8B05-59DAEA28FD57}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5BD7E8FB-5A29-4F8B-8B05-59DAEA28FD57}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5BD7E8FB-5A29-4F8B-8B05-59DAEA28FD57}.Release|Any CPU.Build.0 = Release|Any CPU
+		{333AFD6B-BD4F-47B2-A2C8-306F41223FD9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{333AFD6B-BD4F-47B2-A2C8-306F41223FD9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{333AFD6B-BD4F-47B2-A2C8-306F41223FD9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{333AFD6B-BD4F-47B2-A2C8-306F41223FD9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
