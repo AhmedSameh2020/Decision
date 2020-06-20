@@ -1,25 +1,24 @@
-﻿/// <reference path="../../../../node_modules/@types/jasmine/index.d.ts" />
-import { TestBed, async, ComponentFixture, ComponentFixtureAutoDetect } from '@angular/core/testing';
-import { BrowserModule, By } from "@angular/platform-browser";
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { NO_ERRORS_SCHEMA } from '@angular/core';
+import { QuestionService } from '../question.service';
 import { QuestionComponent } from './question.component';
-
-let component: QuestionComponent;
-let fixture: ComponentFixture<QuestionComponent>;
-
-describe('question component', () => {
-    beforeEach(async(() => {
-        TestBed.configureTestingModule({
-            declarations: [ QuestionComponent ],
-            imports: [ BrowserModule ],
-            providers: [
-                { provide: ComponentFixtureAutoDetect, useValue: true }
-            ]
-        });
-        fixture = TestBed.createComponent(QuestionComponent);
-        component = fixture.componentInstance;
-    }));
-
-    it('should do something', async(() => {
-        expect(true).toEqual(true);
-    }));
+describe('QuestionComponent', () => {
+  let component: QuestionComponent;
+  let fixture: ComponentFixture<QuestionComponent>;
+  beforeEach(() => {
+    const questionServiceStub = () => ({
+      getRootQuestion: () => ({}),
+      getNextQuestion: choice => ({})
+    });
+    TestBed.configureTestingModule({
+      schemas: [NO_ERRORS_SCHEMA],
+      declarations: [QuestionComponent],
+      providers: [{ provide: QuestionService, useFactory: questionServiceStub }]
+    });
+    fixture = TestBed.createComponent(QuestionComponent);
+    component = fixture.componentInstance;
+  });
+  it('can load instance', () => {
+    expect(component).toBeTruthy();
+  });
 });
