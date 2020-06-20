@@ -29,7 +29,6 @@
     "jquery": "3.5.0",
     "oidc-client": "^1.9.1",
     "popper.js": "^1.16.0",
-    "progress-tracker": "^2.0.6",
     "rxjs": "^6.5.3",
     "zone.js": "0.9.1"
   },
@@ -49,6 +48,7 @@
     "karma-coverage-istanbul-reporter": "~2.1.0",
     "karma-jasmine": "~2.0.1",
     "karma-jasmine-html-reporter": "^1.4.2",
+    "progress-tracker": "^2.0.6",
     "typescript": "3.5.3"
   },
   "optionalDependencies": {
