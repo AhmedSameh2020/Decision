@@ -29,12 +29,6 @@ export class QuestionService {
     });
   }
 
-  //async ngOnInit() {
-  //  this.http.get<Question>(this.baseUrl + 'Questionnaire').subscribe(result => {
-  //    this.rootQuestion = this.question = result;
-
-  //  }, error => { console.error(error); });;
-  //}
   getNextQuestion(choice: string) {
 
     if (choice != null) {
